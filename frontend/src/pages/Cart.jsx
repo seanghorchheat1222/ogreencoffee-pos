@@ -100,6 +100,11 @@ function Cart() {
       alert('Customer_name or Table required!')
       return;
     }
+
+    if (carts.items.length === 0) {
+      alert('No item!')
+      return;
+    }
     const orderRecipt = {
       order_type: isOrderType,
       customer_name: orderForm.customer_name,
@@ -396,14 +401,13 @@ function Cart() {
             <div className='text-center mt-5'>Processing payment</div>
             <div className='text-center mt-2'>QR code expired after <span className='font-semibold'>{String(minutes).padStart(2, '0')}:{String(seconds).padStart(2, '0')}</span></div>
             <div className='flex justify-center '>
-              <button className='bg-[#025726] px-12 py-1 text-[#FFFFFF] mt-2 cursor-pointer rounded-full' onClick={() => closeQr()}>
+              <button className='bg-[#025726] px-12 py-2 text-[#FFFFFF] mt-2 cursor-pointer rounded-full' onClick={() => closeQr()}>
                 CLOSE
               </button>
             </div>
           </div>
         </div>
       }
-
     </>
   )
 }

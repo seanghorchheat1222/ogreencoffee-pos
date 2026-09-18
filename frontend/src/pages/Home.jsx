@@ -217,6 +217,11 @@ function Home() {
       alert('Customer_name or Table required!')
       return;
     }
+
+    if(carts.items.length === 0){
+      alert('No item!')
+      return;
+    }
     const orderRecipt = {
       order_type: isOrderType,
       customer_name: orderForm.customer_name,
@@ -894,7 +899,7 @@ function Home() {
         <div className='fixed w-full h-full top-0 left-0 bg-[rgba(255,255,255,0.10)] backdrop-blur-xs z-10 flex justify-center items-center px-2'>
           <div className='w-[90%] sm:w-120 h-120 bg-[#FFFFFF] p-4 flex flex-col justify-center rounded-2xl border border-[#025726]'>
             <div className='font-semibold text-center'>Payment amount</div>
-            <div className='font-semibold text-center'>${qrCheckout?.payway?.amount}</div>
+            <div className='font-semibold text-center mt-2'>${qrCheckout?.payway?.amount}</div>
             <div className='text-[#555555] text-center'>Scan this code with ABA KHQR app to make payment</div>
             <div className='flex justify-center mt-5'>
               <div className='border w-50 h-50'>
@@ -903,8 +908,8 @@ function Home() {
             </div>
             <div className='text-center mt-5'>Processing payment</div>
             <div className='text-center mt-2'>QR code expired after <span className='font-semibold'>{String(minutes).padStart(2, '0')}:{String(seconds).padStart(2, '0')}</span></div>
-            <div className='flex justify-center '>
-              <button className='bg-[#025726] px-12 py-1 text-[#FFFFFF] mt-2 cursor-pointer rounded-full' onClick={() => closeQr()}>
+            <div className='flex justify-center mt-1'>
+              <button className='bg-[#025726] px-12 py-2 text-[#FFFFFF] mt-2 cursor-pointer rounded-full' onClick={() => closeQr()}>
                 CLOSE
               </button>
             </div>
