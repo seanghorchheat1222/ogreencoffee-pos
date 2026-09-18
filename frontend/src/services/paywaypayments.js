@@ -1,7 +1,7 @@
 export const paywayPaymentService = {
   get: async (orderId) => {
     const response = await fetch(
-      `http://localhost:8000/api/payway-payment?order_id=${orderId}`,
+      `${import.meta.env.VITE_API_URL}/api/payway-payment?order_id=${orderId}`,
     );
 
     if (!response.ok) {
@@ -13,7 +13,7 @@ export const paywayPaymentService = {
 
   fail: async (orderId) => {
     const response = await fetch(
-      `http://localhost:8000/api/payway-payment/fail/${orderId}`,
+      `${import.meta.env.VITE_API_URL}/api/payway-payment/fail/${orderId}`,
       {
         method: "POST",
         headers: {
@@ -31,7 +31,7 @@ export const paywayPaymentService = {
 
    status: async (orderId) => {
     const response = await fetch(
-      `http://localhost:8000/api/payway-payment/status/${orderId}`
+      `${import.meta.env.VITE_API_URL}/api/payway-payment/status/${orderId}`
     );
 
     if (!response.ok) {
