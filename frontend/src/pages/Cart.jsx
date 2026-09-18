@@ -259,7 +259,7 @@ function Cart() {
                       <div key={cart.product_id} className='flex h-max flex-col lg:flex-row w-full justify-between md:gap-2 lg:gap-0 '>
                         <div className='flex gap-2'>
                           <div className='bg-[#F4F2E3] w-20 h-20 rounded-2xl p-1'>
-                            <img className='w-full h-full object-contain' src={`${import.meta.env.VITE_IMAGE_URL}/storage/${cart.image}`} alt="" />
+                            <img className='w-full h-full object-contain' src={`${import.meta.env.VITE_IMAGE_URL}/${cart.image}`} alt="" />
                           </div>
                           <div className='flex flex-col justify-between'>
                             <div>

@@ -535,7 +535,7 @@ function Home() {
                     <div className='w-full h-full border border-[#025726] bg-[#FFFFFF] rounded-3xl p-4' key={product.id}>
                       <div className='w-full flex justify-center'>
                         <div className='w-50 h-50 shrink-0 p-4'>
-                          <img className='w-full h-full object-contain' src={`${import.meta.env.VITE_IMAGE_URL}/storage/${product.image}`} alt="" />
+                          <img className='w-full h-full object-contain' src={`${import.meta.env.VITE_IMAGE_URL}/${product.image}`} alt="" />
                         </div>
                       </div>
                       <div className='flex justify-between mt-2'>
@@ -562,7 +562,7 @@ function Home() {
               <div className='fixed w-full h-full top-0 left-0 bg-[rgba(255,255,255,0.10)] backdrop-blur-xs z-10 flex justify-center items-center px-2'>
                 <div className='w-full md:w-[80%] h-max bg-[#FFFFFF] p-4 rounded-3xl border border-[#025726] flex flex-col md:flex-row gap-4 relative'>
                   <div className='h-auto w-full md:w-50 bg-[#F4F2E3] flex justify-center items-center rounded-2xl shrink-0 p-4'>
-                    <img className='w-50 h-50 object-contain' src={`${import.meta.env.VITE_IMAGE_URL}/storage/${showProdct.image}`} alt="" />
+                    <img className='w-50 h-50 object-contain' src={`${import.meta.env.VITE_IMAGE_URL}/${showProdct.image}`} alt="" />
                   </div>
                   <div className='w-full'>
                     <div className='mt-0 md:mt-2'>{showProdct.name ?? ''}</div>
@@ -729,7 +729,7 @@ function Home() {
                       <div key={cart.product_id} className='flex h-max flex-col lg:flex-row w-full justify-between md:gap-2 lg:gap-0 '>
                         <div className='flex gap-2'>
                           <div className='bg-[#F4F2E3] w-20 h-20 rounded-2xl p-1'>
-                            <img className='w-full h-full object-contain' src={`${import.meta.env.VITE_IMAGE_URL}/storage/${cart.image}`} alt="" />
+                            <img className='w-full h-full object-contain' src={`${import.meta.env.VITE_IMAGE_URL}/${cart.image}`} alt="" />
                           </div>
                           <div className='flex flex-col justify-between'>
                             <div>
